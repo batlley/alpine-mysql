@@ -25,7 +25,7 @@ OR
 To start the server and create an initial user (e.g john/doe), database (e.g my_db) and specify root password (root\_pass):
 
 ```
-docker run -it -rm \
+docker run -it --rm \
    --name mysql \
    -p 3306:3306 \
    -v $(pwd):/data \
