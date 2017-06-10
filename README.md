@@ -24,7 +24,7 @@ To start the server and create an initial user (e.g john/doe), database (e.g my_
 docker run -it -rm --name mysql -p 3306:3306 -v $(pwd):/data -e MYSQL_DATABASE=my_db -e MYSQL_USER=john -e MYSQL_PASSWORD=doe -e MYSQL_ROOT_PASSWORD=root_pass batlley/alpine-mysql
 ```
 
-#How to manage mysql (mysql cli)
+# How to manage mysql (mysql cli)
 
 Once the container is running, run:
 
