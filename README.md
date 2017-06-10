@@ -1,6 +1,9 @@
 A minimal lightweight  mysql docker image based on alpine with mysql (~ about 179 MB)
 
 # How to build image
+
+`git clone ..` , then:
+
 ```
 docker build -t batlley/alpine-mysql .
 ```
