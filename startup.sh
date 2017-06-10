@@ -3,6 +3,8 @@
 set -eo pipefail
 shopt -s nullglob
 
+MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-"mysql"}
+
 if [ ! -d "/run/mysqld" ]; then
   mkdir -p /run/mysqld
   chown -R mysql:mysql /run/mysqld
@@ -19,10 +21,7 @@ else
   #mysql_install_db --user=root > /dev/null
   mysql_install_db > /dev/null
 
-  if [ "${MYSQL_ROOT_PASSWORD}" = "" ]; then
-    MYSQL_ROOT_PASSWORD="111111"
-    echo "[i] MySQL root Password: $MYSQL_ROOT_PASSWORD"
-  fi
+  echo "[i] MySQL root Password: $MYSQL_ROOT_PASSWORD"
 
   MYSQL_DATABASE=${MYSQL_DATABASE:-""}
   MYSQL_USER=${MYSQL_USER:-""}

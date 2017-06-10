@@ -1,6 +1,6 @@
-FROM alpine:3.4
+FROM alpine:3.5
 
-MAINTAINER WangXian <xian366@126.com>
+MAINTAINER batlley
 
 WORKDIR /data
 
